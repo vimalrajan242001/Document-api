@@ -1,0 +1,28 @@
+<div class="table table-bordered">
+    <table>
+        <thead>
+            <th>Subject</th>
+            <th>Chapter</th>
+            <th>Description</th>
+            <th>Title</th>
+            <th>Standard</th>
+            <th>Teacher Name</th>
+            <th>Upload Time</th>
+            <th>Type</th>
+            <th>Download</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let doc of documents,index as i" >
+                <td>{{doc.subject}}</td>
+                <td>{{doc.chapter}}</td>
+                <td>{{doc.description}}</td>
+                <td>{{doc.title}}</td>
+                <td>{{doc.standard}}</td>
+                <td>{{doc.teacherName}}</td>
+                <td>{{doc.uploadTime}}</td>
+                <td>{{doc.type}}</td>
+                <td><a href="{{doc.documentLink}}" target="_blank" download="{{doc.chapter}}">Download</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
